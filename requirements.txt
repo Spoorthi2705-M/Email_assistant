@@ -1,0 +1,9 @@
+streamlit
+transformers
+torch
+sentencepiece
+protobuf==3.20.*   # avoids version conflicts with transformers
+scikit-learn
+pandas
+numpy
+email-validator
