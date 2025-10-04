@@ -53,6 +53,15 @@ git clone https://github.com/YourUsername/email_bot.git
 cd email_bot
 
 
+3  vnv
+python -m venv venv
+venv\Scripts\activate 
+
+
+3.intall requirements
+pip install -r requirements.txt
+
+
 
 
 
