@@ -49,16 +49,13 @@ An AI-powered email management system with **human-like draft replies**, **AI su
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YourUsername/email_bot.git
-cd email_bot
+git clone https://github.com/ankitha-km/email_bot.git
+cd email_b
 
-
-3  vnv
 python -m venv venv
 venv\Scripts\activate 
 
 
-3.intall requirements
 pip install -r requirements.txt
 
 
