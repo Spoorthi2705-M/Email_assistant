@@ -9,13 +9,35 @@ An AI-powered email management system with **human-like draft replies**, **AI su
 
 ## Features
 
-- ✅ Fetch unread emails from Gmail securely  
-- 🤖 Summarize emails using AI (Transformers)  
-- ✉️ Generate human-like draft replies automatically  
-- 🛡️ Whitelist / Blacklist email filtering  
-- 📝 Manual approval before sending replies  
-- 📊 View sent email history and logs  
-- ⚡ Streamlit-based interactive dashboard  
+Securely fetch unread emails via IMAP
+
+Summarize long email content using Hugging Face transformer models
+
+Draft human-like replies (customizable or auto-generated)
+
+Auto-reply with summary included
+
+Whitelist / blacklist filtering to avoid spam or loops
+
+Manual approval before sending replies (optionally)
+
+View reply history, logs, and status
+
+Streamlit-based dashboard for ease of use
+------
+
+
+| File / Directory     | Purpose                                                   |
+| -------------------- | --------------------------------------------------------- |
+| `app.py`             | Main Streamlit application entry point                    |
+| `config.py`          | Configuration settings (constants, email settings)        |
+| `summarizer.py`      | Wrappers and utilities for text summarization             |
+| `email_utils.py`     | Functions to fetch, parse, validate, reply to emails      |
+| `filters.py`         | Functions for whitelist / blacklist / loop detection etc. |
+| `draft_generator.py` | Logic for creating draft reply templates                  |
+| `requirements.txt`   | Python dependencies                                       |
+| `README.md`          | This README file                                          |
+
 
 ---
 ## Configuration
@@ -49,14 +71,53 @@ An AI-powered email management system with **human-like draft replies**, **AI su
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ankitha-km/email_assistant.git
-cd email_b
+https://github.com/ankitha-km/email_assistant.git
+cd email_assistant
+```bash
 
-python -m venv venv
-venv\Scripts\activate 
+2.Create a virtual environment & activate it
+```bash
+python3 -m venv venv
+source venv/bin/activate      # Linux / macOS
+venv\Scripts\activate         # Windows
+```bash
 
-
+3.Install dependencies
+```bash
 pip install -r requirements.txt
+```bash
+
+4.Run the Streamlit app
+```bash
+streamlit run app.py
+``bash
+
+
+## **How It Works (High-Level Flow)**
+
+The user logs in via the Streamlit interface using email + app password.
+The system connects to Gmail via IMAP and fetches unread messages.
+It checks for automated or spam emails to avoid reply loops.
+The email body is extracted (text or HTML converted to text).
+A transformer-based summarization model generates a concise summary.
+A draft reply is composed, embedding the summary.
+The system sends the reply using SMTP and marks the email as “Seen.”
+The dashboard shows which emails were processed, with details and success status.
+
+
+ ## **Usage Tips & Configuration**
+
+Use Streamlit’s sidebar to set check interval (seconds) and max emails per check
+Turn on auto-check for periodic inbox scans
+Consider adding your own blacklist / whitelist rules in filters.py
+If encountering errors with large emails, increase summary truncation or fallback to manual reading
+
+
+
+
+
+
+
 
 
 
