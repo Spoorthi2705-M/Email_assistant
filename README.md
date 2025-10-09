@@ -71,26 +71,26 @@ Streamlit-based dashboard for ease of use
 
 1. Clone the repository:
 ```bash
-https://github.com/ankitha-km/email_assistant.git
-cd email_assistant
-```bash
+`https://github.com/ankitha-km/email_assistant.git`
+`cd email_assistant`
+
 
 2.Create a virtual environment & activate it
 ```bash
-python3 -m venv venv
-source venv/bin/activate      # Linux / macOS
-venv\Scripts\activate         # Windows
-```bash
+`python3 -m venv venv`
+`source venv/bin/activate`      # Linux / macOS
+`venv\Scripts\activate`         # Windows
+
 
 3.Install dependencies
 ```bash
-pip install -r requirements.txt
-```bash
+`pip install -r requirements.txt`
+
 
 4.Run the Streamlit app
 ```bash
-streamlit run app.py
-``bash
+`streamlit run app.py`
+
 
 
 ## **How It Works (High-Level Flow)**
