@@ -49,7 +49,7 @@ An AI-powered email management system with **human-like draft replies**, **AI su
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ankitha-km/email_bot.git
+git clone https://github.com/ankitha-km/email_assistant.git
 cd email_b
 
 python -m venv venv
