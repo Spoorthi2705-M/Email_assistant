@@ -99,20 +99,30 @@ streamlit run app.py
 ## **How It Works (High-Level Flow)**
 
 1.The user logs in via the Streamlit interface using email + app password.
+
 2.The system connects to Gmail via IMAP and fetches unread messages.
+
 3.It checks for automated or spam emails to avoid reply loops.
+
 4.The email body is extracted (text or HTML converted to text).
+
 5.A transformer-based summarization model generates a concise summary.
+
 6.A draft reply is composed, embedding the summary.
+
 7.The system sends the reply using SMTP and marks the email as “Seen.”
+
 8.The dashboard shows which emails were processed, with details and success status.
 
 
  ## **Usage Tips & Configuration**
 
 1.Use Streamlit’s sidebar to set check interval (seconds) and max emails per check
+
 2.Turn on auto-check for periodic inbox scans
+
 3.Consider adding your own blacklist / whitelist rules in filters.py
+
 4.If encountering errors with large emails, increase summary truncation or fallback to manual reading
 
 
