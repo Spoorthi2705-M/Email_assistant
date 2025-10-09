@@ -70,6 +70,7 @@ Streamlit-based dashboard for ease of use
 ## Installation
 
 1. Clone the repository:
+2. 
 ```bash
 https://github.com/ankitha-km/email_assistant.git
 cd email_assistant```
@@ -88,8 +89,8 @@ pip install -r requirements.txt```
 
 
 4.Run the Streamlit app
-```bash
-streamlit run app.py```
+bash
+streamlit run app.py
 
 
 
