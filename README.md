@@ -123,7 +123,7 @@ streamlit run app.py
 
 3.Consider adding your own blacklist / whitelist rules in filters.py
 
-4.If encountering errors with large emails, increase summary truncation or fallback to manual reading
+4.If encountering errors with large emails, increase summary truncation or fallback to manual reading.
 
 
 
