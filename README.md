@@ -71,7 +71,7 @@ Streamlit-based dashboard for ease of use
 
 1. Clone the repository: 
 ```bash
-git clone https://github.com/ankitha-km/email_assistant.git
+https://github.com/Spoorthi2705-M/Email_assistant.git
 cd email_assistant
 ```
 
